@@ -1,0 +1,100 @@
+.App {
+  text-align: center;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.backgroundStyle{
+  height: 100%;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.imgSunContainer{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imgMercuryContainer{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.textTitre{
+  font-family: fontText;
+  font-size: 100px;
+  color: #c1cfd5;
+  text-shadow: black 0px 10px 10px;
+}
+
+.textInfoSunTopLeft{
+  font-family: fontText;
+  font-size: 30px;
+  color: #c1cfd5;
+  text-shadow: black 0px 10px 10px;
+  position: absolute;
+  margin-left: 5%;
+}
+
+.textInfoSunTopRight{
+  font-family: fontText;
+  font-size: 30px;
+  color: #c1cfd5;
+  text-shadow: black 0px 10px 10px;
+  position: absolute;
+  margin-left: 55%;
+  margin-top: 10%;
+}
+
+.textInfoSunBotLeft{
+  font-family: fontText;
+  font-size: 30px;
+  color: #c1cfd5;
+  text-shadow: black 0px 10px 10px;
+  position: absolute;
+  margin-left: 5%;
+  margin-top: 10%;
+}
+
+@font-face{
+  font-family: "FontText";
+  src: url("../src/assets/fonts/ChunkFive-Regular.otf") format("truetype");
+}
+
+.showMercuryTexte{
+  font-family: fontText;
+  font-size: 30px;
+  color: red;
+  text-shadow: black 0px 0px 5px;
+  position: absolute;
+  margin-left: 5%;
+}
