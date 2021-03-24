@@ -50,6 +50,18 @@ function App() {
     if (window.scrollY > 900) {
         setStyleMercuryText4(true);
     }
+    if (window.scrollY > 1500) {
+        setStyleVenusText(true);
+    }
+    if (window.scrollY > 1600) {
+        setStyleVenusText2(true);
+    }
+    if (window.scrollY > 1700) {
+        setStyleVenusText3(true);
+    }
+    if (window.scrollY > 1800) {
+        setStyleVenusText4(true);
+    }
     if(window.scrollY > 2800) {
         setImgSatellite(true);
     }
@@ -124,28 +136,28 @@ function App() {
         </Parallax>
 
         <Parallax strength={-400}>
-        {styleMercuryText && 
+        {styleVenusText && 
             <Spring config={{delay: 600}}
                   from={{ opacity: 0 }}
                   to={{ opacity: 1 }}>
                   {props => <p className="textInfoSunTopLeft" style={props}>Vénus est la deuxième planète du Système solaire, c'est la sixième plus grosse aussi bien par la masse que le diamètre. Elle doit son nom à la déesse romaine de l'amour.</p>}
             </Spring>
             }
-            {styleMercuryText2 && 
+            {styleVenusText2 && 
             <Spring config={{delay: 600}}
                   from={{ opacity: 0 }}
                   to={{ opacity: 1 }}>
                   {props => <p className="textInfoSunTopRight" style={props}>Vénus orbite autour du Soleil à une distance moyenne d'environ 108 millions de kilomètres et complète une orbite tous les 224,7 jours terrestres.</p>}
             </Spring>
             }
-             {styleMercuryText3 && 
+             {styleVenusText3 && 
             <Spring config={{delay: 600}}
                   from={{ opacity: 0 }}
                   to={{ opacity: 1 }}>
                   {props => <p className="textInfoSunBotLeft" style={props}>La température de surface de Vénus (462°C) varie peu selon les latitudes et longitudes.</p>}
             </Spring>
             }
-            {styleMercuryText4 && 
+            {styleVenusText4 && 
             <Spring config={{delay: 600}}
                   from={{ opacity: 0 }}
                   to={{ opacity: 1 }}>
