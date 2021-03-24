@@ -23,43 +23,43 @@ function App() {
         <div className="backgroundStyle">
 
             <Parallax strength={-400}> 
-                <Soleil></Soleil>   
+              <Soleil></Soleil>   
             </Parallax>
 
             <Parallax strength={-400}>
-                <Mercure></Mercure>
+              <Mercure></Mercure>
             </Parallax>
 
             <Parallax strength={-400}>
-                <Venus></Venus>
+              <Venus></Venus>
             </Parallax>
 
             <Parallax strength={-400}>
-                <Terre></Terre>
+              <Terre></Terre>
             </Parallax>
 
             <Parallax strength={-400}>
-            <Mars></Mars>
+              <Mars></Mars>
             </Parallax>
 
             <Parallax strength={-400}>
-            <Asteroid></Asteroid>
+              <Asteroid></Asteroid>
             </Parallax>
 
             <Parallax strength={-400}>
-            <Jupiter></Jupiter>
+              <Jupiter></Jupiter>
             </Parallax>
 
             <Parallax strength={-400}>
-                <Saturne></Saturne>
+              <Saturne></Saturne>
             </Parallax>
 
             <Parallax strength={-400}>
-            <Uranus></Uranus>
+              <Uranus></Uranus>
             </Parallax>
 
             <Parallax strength={-400}>
-                <Neptune></Neptune>
+              <Neptune></Neptune>
             </Parallax>
 
         </div>

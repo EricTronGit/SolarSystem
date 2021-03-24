@@ -38,10 +38,25 @@
 .imgSatellite{
   position: absolute;
   height: 8%;
-  margin-bottom: 25%;
-  margin-left: 30%;
+  margin-top: 10%;
+  margin-right: 31%;
 }
 
+.imgMoon{
+  position: absolute;
+  height: 10%;
+  margin-top: 12%;
+  margin-right: 20%;
+  color: red;
+  
+}
+
+.imgIss{
+  position: absolute;
+  height: 6%;
+  margin-top: 43%;
+  margin-right: 35%;
+}
 .imgSunContainer{
   height: 100vh;
   display: flex;
