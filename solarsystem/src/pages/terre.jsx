@@ -67,7 +67,7 @@ function Terre(){
             <Spring config={{delay: 600}}
                   from={{ opacity: 0 }}
                   to={{ opacity: 1 }}>
-                  {props => <p className="textInfoSunBotRight" style={props}>La Station spatiale internationale est une station spatiale placée en orbite terrestre basse, occupée en permanence par un équipage international</p>}
+                  {props => <p className="textInfoSunBotRight textInfosTerreBotRight" style={props}>La Station spatiale internationale est une station spatiale placée en orbite terrestre basse, occupée en permanence par un équipage international</p>}
               </Spring>
             }
             {styleTerreText4 && 

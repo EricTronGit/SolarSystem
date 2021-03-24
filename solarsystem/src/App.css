@@ -122,6 +122,10 @@
   margin-left: 60%;
 }
 
+.textInfosTerreBotRight{
+ margin-left: 65%;
+}
+
 @font-face{
   font-family: "FontText";
   src: url("../src/assets/fonts/ChunkFive-Regular.otf") format("truetype");
