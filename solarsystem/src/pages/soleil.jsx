@@ -55,7 +55,7 @@ function Soleil() {
               <Spring config={{delay: 3300}}
                   from={{ opacity: 0 }}
                   to={{ opacity: 1 }}>
-                  {props =>  <img className="imgFleche" style={props} src={fleche} alt="Flecheclick" ></img> }
+                  {props =>  <img className="imgFleche" style={props} src={fleche} alt="Flecheclicdddk" ></img> }
               </Spring>
               
               <div className="imgSunContainer">       
