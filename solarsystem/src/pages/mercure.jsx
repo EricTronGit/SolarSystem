@@ -1,7 +1,6 @@
-import { useState } from "react";
+import {  useState } from "react";
 import {Spring} from 'react-spring/renderprops'
 import  mercury  from "../assets/mercury.png";
-
 
 function Mercure() {
 

@@ -89,6 +89,17 @@
   margin-right: 55%;
 }
 
+.textInfoVenusTopLeft{
+  font-family: fontText;
+  font-size: 30px;
+  color: #c1cfd5;
+  text-shadow: black 0px 10px 10px;
+  position: absolute;
+  margin-left: 5%;
+  margin-top: 5%;
+  margin-right: 55%;
+}
+
 .textInfoSunTopRight{
   font-family: fontText;
   font-size: 30px;
@@ -131,11 +142,24 @@
   src: url("../src/assets/fonts/ChunkFive-Regular.otf") format("truetype");
 }
 
-.showMercuryTexte{
-  font-family: fontText;
-  font-size: 30px;
-  color: red;
-  text-shadow: black 0px 0px 5px;
+
+.modalHeaderFooter{
+  background:  #253237  !important;
+  color:  #c1cfd5  !important;
+}
+
+.modalBody{
+  background: #c1cfd5  !important;
+}
+
+.modal-content{
+  box-shadow: 10px 5px 5px black !important;
+
+}
+
+.imgFleche{
   position: absolute;
-  margin-left: 5%;
+  height: 15%;
+  margin-top: 20%;
+  margin-left: 14%;
 }

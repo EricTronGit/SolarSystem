@@ -1,6 +1,8 @@
 import './App.css';
 import { Parallax } from "react-parallax";
 
+
+
 import Soleil from './pages/soleil.jsx';
 import Mercure from './pages/mercure.jsx';
 import Venus from './pages/venus.jsx';
@@ -17,48 +19,49 @@ import background from "./assets/backgroundG.png";
 
 function App() {
 
+
   return (
     <div className="App">         
-      <Parallax bgImage={background} strength={4000}>
+      <Parallax bgImage={background} strength={1000}>
         <div className="backgroundStyle">
 
-            <Parallax strength={-400}> 
+            <Parallax strength={-50}> 
               <Soleil></Soleil>   
             </Parallax>
 
-            <Parallax strength={-400}>
+            <Parallax strength={-50}>
               <Mercure></Mercure>
             </Parallax>
 
-            <Parallax strength={-400}>
+            <Parallax strength={-50}>
               <Venus></Venus>
             </Parallax>
 
-            <Parallax strength={-400}>
+            <Parallax strength={-50}>
               <Terre></Terre>
             </Parallax>
 
-            <Parallax strength={-400}>
+            <Parallax strength={-200}>
               <Mars></Mars>
             </Parallax>
 
-            <Parallax strength={-400}>
+            <Parallax strength={-200}>
               <Asteroid></Asteroid>
             </Parallax>
 
-            <Parallax strength={-400}>
+            <Parallax strength={-200}>
               <Jupiter></Jupiter>
             </Parallax>
 
-            <Parallax strength={-400}>
+            <Parallax strength={-200}>
               <Saturne></Saturne>
             </Parallax>
 
-            <Parallax strength={-400}>
+            <Parallax strength={-200}>
               <Uranus></Uranus>
             </Parallax>
 
-            <Parallax strength={-400}>
+            <Parallax strength={-200}>
               <Neptune></Neptune>
             </Parallax>
 
