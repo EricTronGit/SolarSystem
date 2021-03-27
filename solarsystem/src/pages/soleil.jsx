@@ -22,7 +22,7 @@ function Soleil() {
     return (
         <div className="Soleil">
             <span className="textTitre">Le Soleil</span>      
-            <ModalSoleil close={handleClose} textBody={textModal} show={show}></ModalSoleil>      
+            <ModalSoleil close={handleClose} textHeader="le Soleil" textBody={textModal} show={show}></ModalSoleil>      
             <Spring config={{delay: 900}}
                   from={{ opacity: 0 }}
                   to={{ opacity: 1 }}>
@@ -45,7 +45,7 @@ function Soleil() {
                    <OverlayTrigger  
                     overlay={
                         <Tooltip id={`tooltip-top`}>
-                        <strong>La séquence principale désigne aussi le stade principal de l'évolution d'une étoile : c'est pendant cette période que ses caractéristiques correspondent à celles de la séquence principale du diagramme Hertzsprung-Russell et qu'elle s'y trouve effectivement représentée.</strong>.
+                        <strong>La séquence principale désigne aussi le stade principal de l'évolution d'une étoile : c'est pendant cette période que ses caractéristiques correspondent à celles de la séquence principale du diagramme Hertzsprung-Russell et qu'elle s'y trouve effectivement représentée.</strong>
                         </Tooltip>
                     }>
                         <u> la séquence principale </u>

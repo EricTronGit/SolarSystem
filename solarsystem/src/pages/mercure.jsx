@@ -1,8 +1,15 @@
 import {  useState } from "react";
 import {Spring} from 'react-spring/renderprops'
 import  mercury  from "../assets/mercury.png";
+import ModalMercure from "../modal/modal.jsx";
 
 function Mercure() {
+
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
 
     let [styleMercuryText, setStyleMercuryText] = useState(false);
     let [styleMercuryText2, setStyleMercuryText2] = useState(false);
@@ -27,6 +34,7 @@ function Mercure() {
     return (
         <div className="mercure">
             <span className="textTitre">Mercure</span>
+            <ModalMercure close={handleClose} textHeader="Mercure" textBody="test" show={show}></ModalMercure>  
             {styleMercuryText && 
             <Spring config={{delay: 600}}
                   from={{ opacity: 0 }}
@@ -56,7 +64,7 @@ function Mercure() {
               </Spring>
             }
             <div className="imgMercuryContainer">
-                <img className="imgMercury" src={mercury} alt="Mercure"></img>
+                <img className="imgMercury" src={mercury} alt="Mercure" onClick={handleShow}></img>
             </div> 
         </div>
     );

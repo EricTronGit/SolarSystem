@@ -1,11 +1,17 @@
 import { useState } from "react";
 import { Spring } from "react-spring/renderprops-universal";
+import ModalVenus from "../modal/modal.jsx";
+
 
 import venus from "../assets/venus.png";
 
 
 function Venus (){
+    
+    const [show, setShow] = useState(false);
 
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
 
     let [appearTextTopLeftVenus, setAppearTextTopLeftVenus] = useState(false);
     let [appearTextTopRightVenus, setAppearTextTopRightVenus] = useState(false);
@@ -30,6 +36,7 @@ function Venus (){
     return(
         <div className="venus">
             <span className="textTitre">Venus</span>     
+            <ModalVenus close={handleClose} textHeader="Venus" textBody="test" show={show}></ModalVenus>
             {appearTextTopLeftVenus && 
             <Spring config={{delay: 600}}
                   from={{ opacity: 0 }}
@@ -60,7 +67,7 @@ function Venus (){
             }
              
             <div className="imgMercuryContainer">
-                <img className="imgMercury" src={venus} alt="venus"></img>
+                <img className="imgMercury" src={venus} alt="venus" onClick={handleShow}></img>
             </div> 
         </div>
     )

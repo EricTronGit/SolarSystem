@@ -4,9 +4,20 @@ import earth from "../assets/earth.png";
 import moon from "../assets/moon.png";
 import iss from "../assets/iss.png";
 import { useState } from "react";
+import Modal from "../modal/modal.jsx";
 
 
 function Terre(){
+
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
+
+
+    let [textBodyGeneric, settextBodyGeneric] = useState("");
+    let [textHeaderGenric, settextHeaderGenric] = useState("");
 
     let [imgSatellite, setImgSatellite] = useState(false);
     let [imgMoon, setImgMoon] = useState(false);
@@ -32,11 +43,37 @@ function Terre(){
         }
     });
 
+    const openModal = (elementClique) => {
+        switch (elementClique.currentTarget.alt) {
+            case "lune":
+                settextBodyGeneric("je suis la lune");
+                settextHeaderGenric("la Lune")
+                break;
+            case "earth":
+                settextBodyGeneric("je suis la terre");
+                settextHeaderGenric("la Terre")
+                break;    
+            case "iss":
+                settextBodyGeneric("je suis la station spatiale");
+                settextHeaderGenric("la Station Spatiale")
+                break;  
+            case "satellite":
+                settextBodyGeneric("je suis un satellite");
+                settextHeaderGenric("les Satellites")
+                break;      
+            default:
+                console.log("ERREUR LORS DU CLIC POUR LA MODAL")
+                break;
+        }        
+        handleShow();
+    }
+
     return (
         <div className="terre">
             <span className="textTitre">La Terre</span>     
+            <Modal close={handleClose} textHeader={textHeaderGenric} textBody={textBodyGeneric} show={show}></Modal>
             {styleTerreText && 
-            <Spring config={{delay: 600}}
+            <Spring config={{delay: 600}} 
                   from={{ opacity: 0 }}
                   to={{ opacity: 1 }}>
                   {props => <p className="textInfoSunTopLeft" style={props}>La terre est une planète tellurique sur laquelle nous vivons. Par ailleurs, elle est le seul objet céleste connu pour abriter la vie. </p>}
@@ -46,7 +83,7 @@ function Terre(){
             <Spring config={{delay: 600}}
                   from={{ opacity: 0 }}
                   to={{ opacity: 1 }}>
-                  {props => <img className="imgMoon" style={props} src={moon} alt="lune"></img>}
+                  {props => <img className="imgMoon" style={props} src={moon} alt="lune" onClick={openModal}></img>}
             </Spring>
             }
             {styleTerreText2 && 
@@ -74,16 +111,16 @@ function Terre(){
             <Spring config={{delay: 600}}
                   from={{ opacity: 0 }}
                   to={{ opacity: 1 }}>
-                  {props => <img className="imgIss" style={props} src={iss} alt="iss"></img>}
+                  {props => <img className="imgIss" style={props} src={iss} alt="iss" onClick={openModal}></img>}
               </Spring>
             }
             <div className="imgMercuryContainer">
-                <img className="imgMercury" src={earth} alt="earth"></img>
+                <img className="imgMercury" src={earth} alt="earth" onClick={openModal}></img>
                 {imgSatellite && 
                     <Spring config={{delay: 600}}
                         from={{ opacity: 0 }}
                         to={{ opacity: 1 }}>
-                        {props =>  <img className="imgSatellite" style={props} src={satellite} alt="satellite"></img> }
+                        {props =>  <img className="imgSatellite" style={props} src={satellite} alt="satellite" onClick={openModal}></img> }
                     </Spring>
                     }
             

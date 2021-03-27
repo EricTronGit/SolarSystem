@@ -1,6 +1,6 @@
 import { Modal } from "react-bootstrap";
 
-function ModalSoleil(props) {
+function ModalTemplate(props) {
 
     const handleClose = () =>{
         props.close(false);
@@ -10,7 +10,7 @@ function ModalSoleil(props) {
         <div>
             <Modal size="lg" className="modalContainer" show={props.show} onHide={handleClose} animation={true}>
                 <Modal.Header className="modalHeaderFooter" closeButton>
-                    <Modal.Title>A Propos du Soleil</Modal.Title>
+                    <Modal.Title>En savoir plus sur {props.textHeader}</Modal.Title>
                 </Modal.Header>
                 <Modal.Body className="modalBody">
                     {props.textBody}
@@ -21,4 +21,4 @@ function ModalSoleil(props) {
 
 }
 
-export default ModalSoleil;
+export default ModalTemplate;
