@@ -137,6 +137,37 @@
  margin-left: 65%;
 }
 
+.textInfoAsteroidTop{
+  font-family: fontText;
+  font-size: 30px;
+  color: #c1cfd5;
+  text-shadow: black 0px 10px 10px;
+  position: absolute;
+  margin-left: 34%;
+  margin-top: 1%;
+  margin-right: 35%;
+}
+
+.textInfoAsteroidBotLeft{
+  font-family: fontText;
+  font-size: 30px;
+  color: #c1cfd5;
+  text-shadow: black 0px 10px 10px;
+  position: absolute;
+  margin-top: 30%;
+  margin-right: 65%;
+}
+
+.textInfoAsteroidBotRight{
+  font-family: fontText;
+  font-size: 30px;
+  color: #c1cfd5;
+  text-shadow: black 0px 10px 10px;
+  position: absolute;
+  margin-left: 55%;
+  margin-top: 30%;
+}
+
 @font-face{
   font-family: "FontText";
   src: url("../src/assets/fonts/ChunkFive-Regular.otf") format("truetype");
@@ -163,3 +194,20 @@
   margin-top: 20%;
   margin-left: 14%;
 }
+
+::-webkit-scrollbar {
+  width: 14px;
+  height: 14px;
+ }
+ ::-webkit-scrollbar-thumb {
+  background: linear-gradient(13deg, #C1CFD5 14%,#C1CFD5 53%);
+  border-radius: 15px;
+ }
+ ::-webkit-scrollbar-thumb:hover{
+  background: linear-gradient(13deg, #C1CFD5 14%,#C1CFD5 64%);
+ }
+ ::-webkit-scrollbar-track{
+  background: #253237;
+  border-radius: 0px;
+  box-shadow: inset 30px 30px 30px #253237;
+ }
