@@ -1,8 +1,16 @@
 import { useState } from "react";
 import { Spring } from "react-spring/renderprops-universal";
 import asteroid from "../assets/ceintureAsteroid.png";
+import Modal from "../modal/modal.jsx";
+
 
 function Asteroid(){
+
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
 
     let [styleTexteAsteroid, setStyleTexteAsteroid] = useState(false);
     let [styleTexteAsteroid2, setStyleTexteAsteroid2] = useState(false);
@@ -12,10 +20,10 @@ function Asteroid(){
         if (window.scrollY > 5000) {
             setStyleTexteAsteroid(true);
         }
-        if (window.scrollY > 5400) {
+        if (window.scrollY > 5300) {
             setStyleTexteAsteroid2(true);
         }
-        if (window.scrollY > 5400) {
+        if (window.scrollY > 5300) {
             setStyleTexteAsteroid3(true);
         }
     });
@@ -23,6 +31,7 @@ function Asteroid(){
     return (
         <div className="asteroid">
              <span className="textTitre">Ceinture d'asteroïds</span>     
+             <Modal close={handleClose} textHeader="les Astéroïds" textBody="pouet" show={show}></Modal>
              {styleTexteAsteroid && 
                 <Spring config={{delay: 800}}
                   from={{ opacity: 0 }}
@@ -45,7 +54,7 @@ function Asteroid(){
                 </Spring>
                 }   
             <div className="imgMercuryContainer">
-                <img className="imgMercury" src={asteroid} alt="asteroid"></img>
+                <img className="imgMercury" src={asteroid} alt="asteroid"  onClick={handleShow}></img>
             </div> 
         </div>
     )
